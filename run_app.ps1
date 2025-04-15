@@ -18,9 +18,8 @@ docker exec spark-master pip3 install numpy psutil
 
 # Запуск Spark-приложений
 
-#С оптимизацией
-docker exec spark-master /spark/bin/spark-submit --master spark://spark-master:7077 /tmp/spark_app.py True
-
 #Без оптимизации
 docker exec spark-master /spark/bin/spark-submit --master spark://spark-master:7077 /tmp/spark_app.py False
 
+#С оптимизацией
+docker exec spark-master /spark/bin/spark-submit --master spark://spark-master:7077 /tmp/spark_app.py True
